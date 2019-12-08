@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="home.css">
+</style>
+<script type="text/javascript">
+function a()
+{
+var a=f1.t1.value;
+var f=/^\w+([\.-]?\w+)*@\w+?.\w{3}$/;
+if(f.test(a)){
+alert("valid");
+return true;
+}
+else{
+alert("invalid userid");
+f1.t1.focus(); 
+return false;
+}
+}
+</script>
+</head>
+<body>
+<div id="header">	
+<div id="logo">SWATCHNEER</div>
+<!--div id="res_btn" onclick="show_hide_nav('navbar')" ><img src="button.png"/></div-->
+<ul id="navbar">
+<li><a href="home.html">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="signup.html">signup</a></li>
+<li><a href="#">Contacts</a></li>
+</ul>
+</div><br><br>
+<marquee><font color="red">"Pure water is the worlds first and foremost medicine."</font></marquee><br><br><br>
+<div id="login">
+<center>
+<form name="f1" method="POST" action="homevalid.php">
+<table border="2">
+<tr>
+<td> 
+ userid:<input type="text" size="35" name="t1" required><br><br>
+password:<input type="password" size="25" name="t2" required><br><br>
+<center><button onclick="return a();">login</button></center><br>
+</form>
+</td>
+</tr>
+</table><br><br></center>
+</div>
+</body>
+</html>

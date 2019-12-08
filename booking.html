@@ -1,0 +1,50 @@
+<?php
+?>
+<html>
+<head>
+<title>booking</title>
+<style type="text/css">
+h3{
+color:blue;
+</style>
+<script type="text/javascript">
+function book()
+{
+var a=parseInt(f2.t1.value);
+var b=$uid;
+if(a>20){
+alert("value should be lessthan 20");
+f2.t1.focus();
+return false;
+}
+else{
+return true;
+}
+}
+</script>
+</head>
+<body bgcolor=#99d6ff><center>
+<h3>BOOK WATER CANS</h3><br><br></center>
+<form name="f2" method="POST" action="insertbook.php">
+enter no. of cans:<br>
+<input type="text"name="cans" size="40" required><br><br>
+along with can:<br>
+<input type="radio" value="yes" name="along with can:">yes
+<input type="radio" value="no" name="along with can:">no<br>
+<h4>delivery address:</h4>
+dno:<br>
+<input type="text"name="dno" size="40" required><br>
+street:<br>
+<input type="text"name="street" size="40" required><br>
+area:<br>
+<input type="text"name="area" size="40" required><br>
+city:<br>
+<input type="text"name="city" size="40" required><br>
+pincode:<br>
+<input type="text"name="pincode" size="40" required><br><br>
+<button onclick="return book();">book</button>
+</form>
+</body>
+</html>
+
+

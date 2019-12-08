@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>signup</title>
+<style type="text/css">
+h1{
+color:blue;
+}
+img{
+position:relative;
+top:50px;
+left:700px;
+}
+div{
+position:relative;
+bottom:350px;
+left:250px;
+}
+div{
+
+</style>
+<script type="text/javascript">
+function go()
+{
+var a=f1.t1.value;
+var b=f1.t2.value;
+var c=f1.t3.value;
+var d=f1.t4.value;
+var e=f1.t5.value;
+var f=/^\w+([\.-]?\w+)*@\w+([\.-]?\w{3})$/;
+var g=f1.t6.value;
+if(a.length>15){
+alert("fname should be less than 20 char");
+f1.t1.focus();
+return false;
+
+}
+else if(b.length>10){
+alert("lname should be < 10 char");
+f1.t2.focus();
+return false;
+}
+else if(c!=d)
+{
+alert("password doesn't match");
+f1.t3.focus();
+return false;
+}
+else if(f.test(e)==false)
+{
+alert("invalid mail");
+f1.t5.focus();
+return false;
+}
+else if(g.length!=10 || /^\d{10}$/.test(g)==false){
+alert("invalid mobno");
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body bgcolor=#99d6ff>
+<form name="f1" method="POST" action="sample.html">
+<center><h1><u>REGISTER</u></h1></center>	
+<img src="watercan.png" alt="not loaded" height="400" width="400">
+<div>
+firstname:<font color="red">*</font><br>
+<input type="text" name="t1" size="40" required><br><br>
+lastname:<font color="red">*</font><br>
+<input type="text" name="t2" size="40" required><br><br>
+enter password:<font color="red">*</font><br>
+<input type="password" name="t3" size="40" required><br><br>
+confirm password:<font color="red">*</font><br>
+<input type="password" name="t4" size="40" required><br><br>
+gmail:<font color="red">*</font><br>
+<input type="text" name="t5" size="40" required><br><br>
+mobile no:<font color="red">*</font><br>
+<input type="text" maxlength="10" name="t6" size="40" required><br><br>
+<input type="submit" onclick="return go();">
+</div>
+</form>
+</body>
+</html>
